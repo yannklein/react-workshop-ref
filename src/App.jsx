@@ -1344,7 +1344,7 @@ function App() {
 
   return (
     <div className='vh-100 vw-100'>
-      <Navbar />
+      <Navbar filterCafe={filterCafe} />
       <div className="d-flex">
         <div className="row w-100">
           <div className="col-12 col-sm-4 col-xl-3">
