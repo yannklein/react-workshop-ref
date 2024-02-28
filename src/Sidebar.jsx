@@ -20,7 +20,7 @@ function Sidebar({setCafes}) {
     addPosts(event.currentTarget)
   }
 
-  const criterion = ["Stable Wi-Fi", "Power sockets", "Long stays", "Work-friendly tables", "Quiet", "Coffee", "Food", "Video/audio calls", "People working"]
+  const criterion = ["Stable Wi-Fi", "Power sockets", "Quiet", "Coffee", "Food"]
 
   return (
     <div style={{backgroundColor: "#E2EAED"}} className=" d-flex flex-column justify-content-between vh-100 sticky-top">
