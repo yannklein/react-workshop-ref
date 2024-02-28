@@ -20,18 +20,11 @@ function App() {
   }, [keyword]);
 
   return (
-    <div className='vh-100 vw-100'>
+    <div className='app-frame'>
       <Navbar setKeyword={setKeyword} />
-      <div className="d-flex">
-        <div className="row w-100">
-          <div className="col-12 col-sm-4 col-xl-3">
-            <Sidebar setCafes={setCafes} />
-          </div>
-          <div className="col-12 col-sm-8 col-xl-9">
-            <CafeList cafes={cafes}/>
-          </div>
-        </div>
-
+      <div className="app-body">
+        <Sidebar setCafes={setCafes} />
+        <CafeList cafes={cafes}/>
       </div>
     </div>
   );
