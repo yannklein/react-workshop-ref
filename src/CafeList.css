@@ -5,13 +5,13 @@
   padding: 24px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 700px) {
   .cafe-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   .cafe-list {
     grid-template-columns: 1fr 1fr 1fr;
   }

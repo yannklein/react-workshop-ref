@@ -10,7 +10,7 @@ function App() {
   const [keyword, setKeyword] = React.useState("");
 
   React.useEffect(() => {
-    const url = "https://gist.githubusercontent.com/yannklein/5d8f9acb1c22549a4ede848712ed651a/raw/365578847e4dbee0c1d094bb44146bd5446eae97/cafe.json"
+    const url = "https://gist.githubusercontent.com/yannklein/5d8f9acb1c22549a4ede848712ed651a/raw/a66a32fa5a6e2faf5b861f4ee340d3c68ba27ad3/cafe.json"
     const params = (keyword !== "") ? `&keyword=${keyword}` : ""
     fetch(url + params)
       .then(response => response.json())
