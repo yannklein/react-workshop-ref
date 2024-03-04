@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Sidebar.css";
+import logo from '../../assets/logo_w_context2.png'
 
 function Sidebar({setCafes}) {
   function addCafe(form) {
@@ -54,7 +55,7 @@ function Sidebar({setCafes}) {
           </div>
         </form>
       </div>
-      <img src="logo_w_context2.png" alt="" />
+      <img src={logo} alt="keyboard and matcha logo" />
     </div>
   );
 }
