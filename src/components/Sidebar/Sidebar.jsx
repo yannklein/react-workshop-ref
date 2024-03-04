@@ -27,13 +27,13 @@ function Sidebar({setCafes}) {
       <div>
         <h3>Share your work spot</h3>
         <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="cafe-title" className="form-label">What's its name?</label>
-            <input name="cafe[title]" placeholder="FabCafe Shibuya" type="text" className="form-control" id="cafe-title" aria-describedby="emailHelp" />
-          <div className="mb-3"> 
-          </div>
-            <label htmlFor="cafe-address" className="form-label">Where is it?</label>
-            <input name="cafe[address]" placeholder="1-chome-11-1 Shibuya, Shibuya City, 150-0002, Tokyo, 150-0002, Tokyo" type="address" className="form-control" id="cafe-address" />
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="cafe-title"><i className="fa-solid fa-mug-saucer form-icons"></i></span>
+            <input name="cafe[title]" placeholder="FabCafe Shibuya" type="text" className="form-control" aria-describedby="cafe-title" />
+            </div>
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="cafe-address"><i className="fa-solid fa-location-dot form-icons"></i></span>
+            <input name="cafe[address]" placeholder="1-chome-11-1 Shibuya, Shibuya City, 150-0002, Tokyo, 150-0002, Tokyo" aria-describedby="cafe-address" type="address" className="form-control" />
           </div>
           <div className="mb-3"> 
             { criteria.map((criterion) => {
@@ -45,9 +45,9 @@ function Sidebar({setCafes}) {
               )
             }) }
           </div>
-          <div className="mb-3">
-            <label htmlFor="cafe-picture" className="form-label">What's its name?</label>
-            <input name="cafe[picture]" type="text" className="form-control" id="cafe-picture" placeholder='http://example.com/image.jpg'/>
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="cafe-picture"><i className="fa-solid fa-camera-retro form-icons"></i></span>
+            <input name="cafe[picture]" type="text" className="form-control" aria-describedby="cafe-picture" placeholder='http://example.com/image.jpg'/>
           </div>
           <div className="d-grid">
             <button type="submit" className="btn btn-success">Ready to brew</button>
