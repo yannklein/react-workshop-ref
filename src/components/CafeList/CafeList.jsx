@@ -5,7 +5,7 @@ import "./CafeList.css"
 function CafeList({cafes}) {
   return (
     <div className="cafe-list">
-      { cafes?.map( cafe => <Cafe cafe={cafe} key={cafe.title}/>)}
+      { cafes.map( cafe => <Cafe cafe={cafe} key={cafe.title}/>)}
     </div>
   );
 }
