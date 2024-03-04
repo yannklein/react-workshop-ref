@@ -2,12 +2,11 @@ import React from 'react';
 import "./Sidebar.css";
 
 function Sidebar({setCafes}) {
-  function addPosts(form) {
+  function addCafe(form) {
     const url = "https://matcha-and-keyboard-f549965e60e7.herokuapp.com/api/v1/cafes"
     fetch(url, {
       method: "POST",
-      headers: {"Content-type": "application/json"},
-      body: JSON.stringify(new FormData(form))
+      body: new FormData(form)
     })
       .then(response => response.json())
       .then((data) => {
@@ -17,7 +16,7 @@ function Sidebar({setCafes}) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    addPosts(event.currentTarget)
+    addCafe(event.currentTarget)
   }
 
   const criteria = ["Stable Wi-Fi", "Power sockets", "Quiet", "Coffee", "Food"]
