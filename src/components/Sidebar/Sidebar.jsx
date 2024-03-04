@@ -40,7 +40,7 @@ function Sidebar({setCafes}) {
               return ( 
                 <React.Fragment key={criterion}>
                   <input name="cafe[criteria]" type="checkbox" className="btn-check" id={criterion} autoComplete="off" />
-                  <label className="btn btn-outline-success btn-sm mx-1 mb-1" htmlFor="feature-wifi">{criterion}</label>
+                  <label className="btn btn-outline-success btn-sm mx-1 mb-1" htmlFor={criterion}>{criterion}</label>
                 </React.Fragment>
               )
             }) }
