@@ -28,25 +28,26 @@ function Sidebar({setCafes}) {
         <h3>Share your work spot</h3>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="cafe-name" className="form-label">What's its name?</label>
-            <input placeholder="FabCafe Shibuya" type="text" className="form-control" id="cafe-name" aria-describedby="emailHelp" />
+            <label htmlFor="cafe-title" className="form-label">What's its name?</label>
+            <input name="cafe[title]" placeholder="FabCafe Shibuya" type="text" className="form-control" id="cafe-title" aria-describedby="emailHelp" />
           <div className="mb-3"> 
           </div>
             <label htmlFor="cafe-address" className="form-label">Where is it?</label>
-            <input placeholder="1-chome-11-1 Shibuya, Shibuya City, 150-0002, Tokyo, 150-0002, Tokyo" type="address" className="form-control" id="cafe-address" />
+            <input name="cafe[address]" placeholder="1-chome-11-1 Shibuya, Shibuya City, 150-0002, Tokyo, 150-0002, Tokyo" type="address" className="form-control" id="cafe-address" />
           </div>
           <div className="mb-3"> 
             { criteria.map((criterion) => {
               return ( 
                 <React.Fragment key={criterion}>
-                  <input type="checkbox" className="btn-check" id={criterion} autoComplete="off" />
+                  <input name="cafe[criteria]" type="checkbox" className="btn-check" id={criterion} autoComplete="off" />
                   <label className="btn btn-outline-success btn-sm mx-1 mb-1" htmlFor="feature-wifi">{criterion}</label>
                 </React.Fragment>
               )
             }) }
           </div>
-          <div className="input-group my-3">
-            <input type="file" className="form-control" id="cafe-picture" />
+          <div className="mb-3">
+            <label htmlFor="cafe-picture" className="form-label">What's its name?</label>
+            <input name="cafe[picture]" type="text" className="form-control" id="cafe-picture" placeholder='http://example.com/image.jpg'/>
           </div>
           <div className="d-grid">
             <button type="submit" className="btn btn-success">Ready to brew</button>
