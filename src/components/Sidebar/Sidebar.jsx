@@ -9,8 +9,9 @@ function Sidebar({setCafes}) {
       body: new FormData(form)
     })
       .then(response => response.json())
-      .then((data) => {
-        setCafes(data)
+      .then((newCafe) => {
+        setCafes((cafeList) => [...cafeList, newCafe]);
+        form.reset();
       })
   }
 
@@ -38,7 +39,7 @@ function Sidebar({setCafes}) {
             { criteria.map((criterion) => {
               return ( 
                 <React.Fragment key={criterion}>
-                  <input name="cafe[criteria]" type="checkbox" className="btn-check" id={criterion} autoComplete="off" />
+                  <input name="cafe[criteria][]" type="checkbox" className="btn-check" id={criterion} autoComplete="off" value={criterion}/>
                   <label className="btn btn-outline-success btn-sm mx-1 mb-1" htmlFor={criterion}>{criterion}</label>
                 </React.Fragment>
               )
