@@ -12,7 +12,10 @@ function Slides({ slidesDisplayed, setSlidesDisplayed }) {
     const deck = new Reveal({
       plugins: [Markdown, Highlight],
     });
-    deck.initialize({ embedded: true });
+    deck.initialize({ 
+      embedded: true,
+      minScale: 1,
+    });
   }, []);
 
   const slideClass = `slide-frame ${slidesDisplayed ? '' : 'd-none'}`;
@@ -38,7 +41,7 @@ function Slides({ slidesDisplayed, setSlidesDisplayed }) {
         <button
           onClick={handleClick}
           type="button"
-          className="btn-close position-absolute top-0 end-0 z-3"
+          className="m-3 btn-close-white btn-close position-absolute top-0 end-0 z-3"
           aria-label="Close"
         ></button>
       </div>
