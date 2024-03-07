@@ -13,7 +13,7 @@ function Slides({ slidesDisplayed, setSlidesDisplayed }) {
       plugins: [Markdown, Highlight],
     });
     deck.initialize({ embedded: true });
-  }, [slidesDisplayed]);
+  }, []);
 
   const slideClass = `slide-frame ${slidesDisplayed ? '' : 'd-none'}`;
 
