@@ -6,7 +6,7 @@ import { resolve } from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/react-workshop-ref-feb2024/",
+  base: "/react-workshop-ref/",
   build: {
     rollupOptions: {
       input: {
