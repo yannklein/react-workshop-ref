@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [react()],
   base: "/react-workshop-ref/",
   build: {
+    outDir: "dist",
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),

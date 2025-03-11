@@ -39,12 +39,15 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Debug Build Directory
+        run: ls -lah ./dist
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3  # Updated from v2 to v3
         with:
           path: './dist'
+          name: github-pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
