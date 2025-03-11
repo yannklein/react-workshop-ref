@@ -35,7 +35,7 @@ function App() {
       updated_at: '2024-03-01T07:45:37.054Z',
     },
   ]);
-  const [keyword, setKeyword] = React.useState('');
+  const [, setKeyword] = React.useState('');
 
   // React.useEffect(() => {
   //   const url = "https://matcha-and-keyboard-f549965e60e7.herokuapp.com/api/v1/cafes";
