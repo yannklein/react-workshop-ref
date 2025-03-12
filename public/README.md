@@ -78,7 +78,7 @@ Props are React Component's args/params.
 
 ```jsx
   function Hello({name, country}) {
-    return `Hello, I am ${props.name} from ${props.country}`;
+    return `Hello, I am ${name} from ${country}`;
   }
   root.render(<Hello name="Rosa" country="Guatemala"/>)
 ```
